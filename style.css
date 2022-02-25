@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Manrope:wght@400;600;800&family=Space+Mono&display=swap");
+
+body {
+  background-color: hsl(230, 100%, 99%);
+  font-family: "Manrope", sans-serif;
+  height: 100vh;
+}
+
+hr {
+  color: hsl(225, 20%, 60%);
+  width: 100%;
+  padding: 0;
+}
+.row {
+  margin: 40px 0 15px;
+  margin-left: 20px;
+}
+
+/* Containers */
+.top-container {
+  background-color: hsla(223, 48%, 87%, 0.26);
+  border-radius: 0 0 0 150px;
+  height: 55%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0;
+}
+
+/* Headings */
+.heading {
+  text-align: center;
+  margin-top: 20px;
+  background-image: url("pattern-circles.svg");
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-position: center;
+  transform: translateY(-25%);
+}
+
+.heading h1 {
+  font-weight: 800;
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+.heading h4 {
+  color: hsl(225, 20%, 60%);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Pricing Component  */
+.pricing {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.178);
+  min-width: 50%;
+  padding: 0px;
+}
+
+.info {
+  margin: 60px 50px 50px;
+}
+
+.month {
+  font-size: 1rem;
+  display: inline;
+  color: hsl(225, 20%, 60%);
+  font-weight: 600;
+  position: relative;
+  top: -10px;
+}
+
+.info .page-views {
+  font-size: 15px;
+  color: hsl(225, 20%, 60%);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.billings {
+  display: flex;
+  align-items: center;
+  margin-left: 140px;
+  margin-bottom: 50px;
+}
+
+.billings:before {
+  content: "Monthly Billing";
+  padding: 0 10px;
+  font-size: 0.9rem;
+  color: hsl(225, 20%, 60%);
+  font-weight: 600;
+}
+
+/* Toggle switch button  */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223, 50%, 87%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  top: 4px;
+  bottom: 3px;
+  left: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(174, 77%, 80%);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.yearly-billings {
+  margin: 0 0 0 10px;
+  font-size: 0.9rem;
+  color: hsl(225, 20%, 60%);
+  font-weight: 600;
+}
+
+.yearly-billings::after {
+  content: "25% discount";
+  color: hsl(15, 100%, 70%);
+  margin: 0 10px;
+  background-color: hsl(14, 92%, 95%);
+  padding: 5px 7px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  border-radius: 20px;
+}
+
+.features {
+  margin-right: 50px;
+}
+.features ul {
+  list-style: url("icon-check.svg");
+}
+
+.features ul li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  color: hsl(225, 20%, 60%);
+  font-weight: 600;
+}
+
+/* Button  */
+.btn {
+  margin: auto;
+  transform: translateY(-20%);
+}
+
+.btn-test {
+  background-color: hsl(227, 35%, 25%);
+  padding: 10px 50px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  color: hsl(226, 100%, 87%);
+  font-weight: 600;
+}
+.btn-test:hover {
+  background-color: hsl(227, 35%, 25%);
+  color: #fff;
+}
+
+.btn-test:focus {
+  background-color: hsl(227, 35%, 25%);
+  border: 0;
+  outline: none;
+}
+
+/* Slider  */
+.wrap {
+  position: relative;
+  margin: 20px 50px 40px;
+  width: 80%;
+}
+.wrap label {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  font-size: 2.5rem;
+  transform: translateY(-70%);
+  font-weight: 800;
+}
+.range {
+  width: 100%;
+  cursor: grab;
+  opacity: 0;
+  height: 50px;
+  border-radius: 50px;
+}
+.range::-ms-tooltip {
+  display: none;
+}
+
+.track {
+  width: 100%;
+  height: 8px;
+  border-radius: 50px;
+  background: hsl(224, 65%, 95%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: grab;
+}
+.track-inner {
+  width: 0;
+  height: 100%;
+  background: hsl(174, 77%, 80%);
+  border-radius: 50px;
+}
+
+.thumb {
+  width: 45px;
+  height: 45px;
+  background: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  pointer-events: none;
+  background-image: url("icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 850px) {
+  body {
+    text-align: center;
+    position: relative;
+  }
+
+  .container {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    left: 0;
+  }
+  .heading {
+    margin-top: 50px;
+  }
+  .heading h1 {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+  .heading h4 {
+    width: 70%;
+    margin: auto;
+  }
+
+  .wrap {
+    margin: 20px auto 0;
+    width: 80%;
+  }
+  .range {
+    width: 80%;
+  }
+
+  .track {
+    width: 100%;
+  }
+
+  .pricing {
+    text-align: center;
+    max-width: 90%;
+    padding: 0;
+  }
+  .btn-test {
+    margin-top: 20px;
+  }
+  .features {
+    transform: translateX(-5%);
+  }
+
+  .wrap label {
+    position: relative;
+    top: 10px;
+  }
+  .billings {
+    margin: 0;
+    padding: 0 10px;
+  }
+  .billings:before {
+    content: "Monthly Billing";
+    font-size: 0.8rem;
+  }
+
+  .yearly-billings {
+    font-size: 0.8rem;
+  }
+
+  .yearly-billings::after {
+    content: "-25%";
+    font-size: 0.8rem;
+    margin: 0;
+    transform: translateY(20%);
+  }
+}
